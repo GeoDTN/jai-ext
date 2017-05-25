@@ -173,7 +173,7 @@ public class ImageFunctionOpImage extends SourcelessOpImage {
         }
 
         // Allocate the actual data memory.
-        int length = width * height;
+        int length = roiImage.width *roiImage.height;
         Object data;
         if (dataType == DataBuffer.TYPE_DOUBLE) {
             data = function.isComplex() ? (Object) new double[2][length]
